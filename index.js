@@ -12,4 +12,4 @@ mongoose.connect('mongodb://localhost:27017/ipag', {useNewUrlParser: true, useUn
 requireDir('./src/models');
 
 app.use('/sistema', require('./src/routes/routes'));
-app.listen(3005);
+app.listen(process.env.PORT || 3005);
